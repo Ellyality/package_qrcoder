@@ -1,7 +1,7 @@
 {
 	"name": "com.ellyality.utility.qrcoder",
 	"displayName":"QR Coder",
-	"version": "1.0.0",
+	"version": "1.0.1",
     "author": "Elly Utility",
     "unity": "2019.2",
     "keywords": ["utility", "qrcode", "generator"],

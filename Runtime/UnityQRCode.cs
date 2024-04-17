@@ -1,8 +1,7 @@
-﻿using QRCoder;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cmie
+namespace QRCoder
 {
     public class UnityQRCode : AbstractQRCode
     {
