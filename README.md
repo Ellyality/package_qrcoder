@@ -8,13 +8,35 @@ For any problem that need to be solve beyond qrcode texture 2d generation, you c
 
 We need below elements in order to generate a QR code texture2D target
 
-![1](./docs/1.PNG)
+```csharp
+public class QRHandler : MonoBehaviour
+{
+  RawImage ima;
+  QRCodeGenerator generator;
+  QRCodeData qrdata;
+  UnityQRCode qr;
+  Texture qrtex;
+}
+```
 
 Let's init the generator first, this can be reuse afterward
 
-![2](./docs/2.PNG)
+```csharp
+private void Start()
+{
+    generator = new QRCodeGenerator();
+}
+```
 
 Create a set data function\
 ProtestTopTest is RawImage instance
 
-![3](./docs/3.PNG)
+```csharp
+public void SetData(string d)
+{
+    qrdata = generator.CreateQrCode(d, QRCodeGenerator.ECCLevel.Q);
+    qr = new UnityQRCode(qrdata);
+    qrtex = qr.GetGraphic(20);
+    ima.texture = qrtex;
+}
+```
